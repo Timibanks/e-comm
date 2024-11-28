@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/each.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sevillana&display=swap"
+ rel="stylesheet">
+  </head>
+
+  <body>
+  
+    <nav>
+      <div class="navbar">
+        <div class="insider">
+            
+            <img src="/static/images/cih.png" style="width: 60px; " />
+        </div>
+        <div class="secondinsider">
+          <ul>
+            <li>Login</li>
+            <li> Sign Up</li>
+          </ul>
+        </div>
+      </div>   
+    </nav>
+    <section>
+      <div class="tabs">
+        <div class="buy">
+          <iframe width="390" height="315" src="https://www.youtube.com/embed/4ZgGIWj_A-w?si=LSrzo1UeX9rZUGMx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="" style=" margin: 0 auto; font-size: 1rem; color: white;">
+            <button style="display: block; color: white; font: inherit; background-color: blue; width: 90%; padding: 8px; margin: 0 auto; margin-bottom: 10px;">Buy</button>
+            <button style="width: 90%; color: white; font: inherit; margin: 5px 0 0 20px ; background-color: blue; padding: 8px; ">Add to cart</button>
+          </div>
+          <div class="sec">
+            <h5>this course include</h5>
+            <ul>
+              <li>52 hours on-demand video</li>
+              <li>23 hrs coding excercise</li>
+              <li>Assignment</li>
+              <li>225 articles</li>
+              <li>150 downloadable resources</li>
+              <li>Accessble on mobile and Tv</li>
+              <li>Fulltime lifetime access</li>
+              <li>Certificate of completion</li>
+            </ul>
+          </div>
+
+        </div>
+       
+        <div class="icons" style="color: white; text-align: left;height: 300px; width: 100%;background-color: #1c1d1f; padding-left: 5rem; padding-top: 3rem;">
+          <h1 style="font-size: 1.6rem; width: 50rem; ">{{course.title}}</h1>
+          <h1 style="width: 600px; font-weight: 200; font-size: 0.8rem;">Become a Full-Stack Web Developer with just ONE course.
+             HTML, CSS, Javascript, Node, React, PostgreSQL, Web3 and DApps
+          </h1>
+          <button style="color: black; padding:0 8px;">bestseller</button>
+          <p style="margin: 5px; display: inline;" ;>{{course.rating}}</p>
+          <div class="st" style="display: inline;">
+            <i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i
+              ><i class="fa-solid fa-star" style="color: #ffd43b"></i> &nbsp;
+              <h5 style="display: inline;">(298,859)</h5> &nbsp;
+              <h5 style="display: inline;">100+ Student &nbsp;</h5>
+          </div>
+
+            &nbsp;
+        </div>
+        <div style="display: flex; flex-wrap: nowrap;  width: 50rem; margin-left: 29px; border-radius: 10px; border: .3px solid rgb(0, 0, 0); box-sizing: border-box; text-align: center; white-space: normal;">
+          <ul style="gap: -15px; display: grid; grid-template-columns: repeat(3, 13rem); align-items: center;">
+            {% for goal in course.goals %}
+            <li style="word-spacing: 1px;  text-align: left; padding: 0 ; white-space: normal; display: inline-block;">{{goal | safe}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <p  style="padding-left: 6.5rem;"><a href="">{{course.names | safe}}</a></p>
+      <p style="padding-left: 6.5rem;">Last updated 11/2024</p>
+      <div class="order" style="margin-top: 40rem;">
+       
+      </div>
+      {% if course.place %}{% endif %}
+        <div class="maingoal">
+      
+        </div>
+      </div>
+      
+    </section>
+  </body>
+</html>
